@@ -18,7 +18,7 @@ void configuro(void) {
     ANSELB = 0X00;  //RB digitales
     WPUB =0X1F;
     WPUF =0X08;
-    //configuraciones de la E/S de servo
+    //configuraciones de la E/S de bluetooth
     TRISFbits.TRISF0 = 0;   //RF0 como salida TX
     ANSELFbits.ANSELF0 = 0; //RF0 como digital TX
     TRISFbits.TRISF1 = 1;   //RF1 como entrada RX
