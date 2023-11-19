@@ -16,20 +16,20 @@ void configuro(void) {
     ANSELC = 0XFE;  //RC digitales
     TRISB = 0XFF;   //RB entrada
     ANSELB = 0X00;  //RB digitales
-    WPUB =0X1F;
-    WPUF =0X08;
+    TRISFbits.TRISF3 = 0;    //RF3 salida
+    ANSELFbits.ANSELF3 = 0;  //RF3 digital
+    WPUB =0X1F;    //Pull up Botones RB0, RB1, RB4
+    WPUF =0X08;    //Pull up Led RF3
     //configuraciones de la E/S de bluetooth
     TRISFbits.TRISF0 = 0;   //RF0 como salida TX
     ANSELFbits.ANSELF0 = 0; //RF0 como digital TX
     TRISFbits.TRISF1 = 1;   //RF1 como entrada RX
     ANSELFbits.ANSELF1 = 0; //RF1 como digital RX
-    TRISD = 0X00;     //RD salidas
-    ANSELD = 0X00;    //RD digitales
-    
-    TRISFbits.TRISF3 = 0;
-    ANSELFbits.ANSELF3 = 0;
-    LATFbits.LATF3=1;
-    LATCbits.LATC0=0;
+    TRISD = 0X00;     //RD salidas LCD 16X2
+    ANSELD = 0X00;    //RD digitales LCD 16X2
+   
+    LATFbits.LATF3=1; LED
+    LATCbits.LATC0=0; //Buzzer
 }
 
 
